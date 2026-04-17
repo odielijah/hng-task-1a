@@ -2,7 +2,7 @@
 
 This is a single Todo Card component — not a full app. It extends the Stage 1B Profile Card into a more interactive, app-like experience with editable content, status transitions, priority indicators, expand/collapse behaviour, and live time tracking.
 
-**View Live Demo** <!-- add your live URL here -->  
+[View Live Demo](https://hng-task-1a-odielijah.netlify.app/)
 
 ## 📸 Project Preview
 <img width="1680" height="1050" alt="Screenshot 2026-04-17 at 5 30 49 pm" src="https://github.com/user-attachments/assets/499369da-2085-40f9-8412-963782c4745f" />
