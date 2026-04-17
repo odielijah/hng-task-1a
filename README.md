@@ -22,8 +22,8 @@ This is a single Todo Card component — not a full app. It extends the Stage 1B
 No build tools or dependencies required.
 
 ```bash
-git clone <your-repo-url>
-cd <repo-folder>
+git clone https://github.com/odielijah/hng-task-1a.git
+cd hng-task-1a
 ```
 
 Then open `index.html` directly in your browser, or use a local dev server:
