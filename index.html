@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HNG Stage 1A - Advanced Todo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article data-testid="test-todo-card" class="todo-card" id="todo-card">
+      <div
+        data-testid="test-todo-priority-indicator"
+        class="priority-indicator"
+      ></div>
+
+      <div class="card-content">
+        <div id="display-mode">
+          <header class="card-header">
+            <div class="header-top">
+              <h2 id="todo-title" data-testid="test-todo-title">
+                Finish HNG Task 1A
+              </h2>
+              <span
+                id="status-badge"
+                data-testid="test-todo-status"
+                class="badge-pending"
+                >Pending</span
+              >
+            </div>
+
+            <div class="header-meta">
+              <span data-testid="test-todo-priority" class="priority-badge"
+                >High</span
+              >
+              <div class="time-hint">
+                <span class="icon">🕒</span>
+                <time
+                  id="time-remaining"
+                  data-testid="test-todo-time-remaining"
+                  aria-live="polite"
+                  >Calculating...</time
+                >
+                <span
+                  id="overdue-label"
+                  data-testid="test-todo-overdue-indicator"
+                  class="overdue-tag hidden"
+                  >OVERDUE</span
+                >
+              </div>
+            </div>
+          </header>
+
+          <div
+            id="collapsible-section"
+            data-testid="test-todo-collapsible-section"
+            class="description-container"
+          >
+            <p
+              id="todo-description"
+              data-testid="test-todo-description"
+              class="description collapsed"
+            ></p>
+            <button
+              id="expand-toggle"
+              data-testid="test-todo-expand-toggle"
+              aria-expanded="false"
+              aria-controls="collapsible-section"
+            >
+              Show More
+            </button>
+          </div>
+
+          <div class="middle-row">
+            <div class="date-box">
+              <span class="icon">📅</span>
+              <time id="display-due-date" data-testid="test-todo-due-date"
+                >Apr 17, 2026</time
+              >
+            </div>
+
+            <select
+              id="status-control"
+              data-testid="test-todo-status-control"
+              aria-label="Change Status"
+            >
+              <option value="Pending">Pending</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Done">Done</option>
+            </select>
+          </div>
+
+          <div class="complete-area">
+            <input
+              type="checkbox"
+              id="complete-toggle"
+              data-testid="test-todo-complete-toggle"
+            />
+            <label for="complete-toggle">Mark as Complete</label>
+          </div>
+
+          <footer class="card-footer">
+            <button
+              id="edit-button"
+              data-testid="test-todo-edit-button"
+              class="btn-edit"
+            >
+              <span>✏️</span> Edit
+            </button>
+            <button data-testid="test-todo-delete-button" class="btn-delete">
+              <span>🗑️</span> Delete
+            </button>
+          </footer>
+        </div>
+
+        <form id="edit-mode" data-testid="test-todo-edit-form" class="hidden">
+          <h3>Edit Task</h3>
+          <div class="form-group">
+            <label for="edit-title">Title</label>
+            <input
+              type="text"
+              id="edit-title"
+              data-testid="test-todo-edit-title-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="edit-description">Description</label>
+            <textarea
+              id="edit-description"
+              data-testid="test-todo-edit-description-input"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edit-priority">Priority</label>
+              <select
+                id="edit-priority"
+                data-testid="test-todo-edit-priority-select"
+              >
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="edit-due-date">Due Date</label>
+              <input
+                type="datetime-local"
+                id="edit-due-date"
+                data-testid="test-todo-edit-due-date-input"
+              />
+            </div>
+          </div>
+          <div class="edit-actions">
+            <button
+              type="submit"
+              data-testid="test-todo-save-button"
+              class="btn-save"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              data-testid="test-todo-cancel-button"
+              class="btn-cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </article>
+    <script src="script.js"></script>
+  </body>
+</html>
